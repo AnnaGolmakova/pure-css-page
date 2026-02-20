@@ -1,5 +1,5 @@
 import { aY as he, aZ as pt, aJ as A, x as U, ax as T, aI as te, a_ as gt } from './Bz7693Yi.js';
-import { o as Ne } from './R03pnBup.js';
+import { o as qe } from './R03pnBup.js';
 const V = [];
 function Se(e, t = he) {
 	let n = null;
@@ -293,16 +293,16 @@ function De(e, t, n = JSON.stringify) {
 		sessionStorage[e] = a;
 	} catch {}
 }
-const x = globalThis.__sveltekit_qfwk3f?.base ?? '/test-animated-tabs',
-	Tt = globalThis.__sveltekit_qfwk3f?.assets ?? x ?? '',
-	It = '1771538657316',
+const x = globalThis.__sveltekit_oc28ij?.base ?? '/test-animated-tabs',
+	Tt = globalThis.__sveltekit_oc28ij?.assets ?? x ?? '',
+	It = '1771545992338',
 	We = 'sveltekit:snapshot',
 	Ye = 'sveltekit:scroll',
 	Je = 'sveltekit:states',
 	Ot = 'sveltekit:pageurl',
 	B = 'sveltekit:history',
 	W = 'sveltekit:navigation',
-	j = { tap: 1, hover: 2, viewport: 3, eager: 4, off: -1, false: -1 },
+	C = { tap: 1, hover: 2, viewport: 3, eager: 4, off: -1, false: -1 },
 	Ae = location.origin;
 function He(e) {
 	if (e instanceof URL) return e;
@@ -313,13 +313,13 @@ function He(e) {
 	}
 	return new URL(e, t);
 }
-function N() {
+function q() {
 	return { x: pageXOffset, y: pageYOffset };
 }
 function K(e, t) {
 	return e.getAttribute(`data-sveltekit-${t}`);
 }
-const Ve = { ...j, '': j.hover };
+const Ve = { ...C, '': C.hover };
 function Xe(e) {
 	let t = e.assignedSlot ?? e.parentNode;
 	return (t?.nodeType === 11 && (t = t.host), t);
@@ -431,18 +431,18 @@ const et = new Set(['load', 'prerender', 'csr', 'ssr', 'trailingSlash', 'config'
 [...et];
 const $t = new Set([...et]);
 [...$t];
-function Ct(e) {
+function jt(e) {
 	return e.filter((t) => t != null);
 }
 function Ue(e) {
 	return e instanceof Ee || e instanceof xe ? e.status : 500;
 }
-function jt(e) {
+function Ct(e) {
 	return e instanceof xe ? e.text : 'Internal Error';
 }
 let k, Y, _e;
-const qt = Ne.toString().includes('$$') || /function \w+\(\) \{\}/.test(Ne.toString());
-qt
+const Nt = qe.toString().includes('$$') || /function \w+\(\) \{\}/.test(qe.toString());
+Nt
 	? ((k = {
 			data: {},
 			form: null,
@@ -532,19 +532,19 @@ qt
 			}
 		})()),
 		(Qe.v = () => (_e.current = !0)));
-function Nt(e) {
+function qt(e) {
 	Object.assign(k, e);
 }
 const Dt = new Set(['icon', 'shortcut icon', 'apple-touch-icon']),
-	C = Ge(Ye) ?? {},
+	j = Ge(Ye) ?? {},
 	J = Ge(We) ?? {},
 	$ = { url: Ke({}), page: Ke({}), navigating: Se(null), updated: Pt() };
 function Te(e) {
-	C[e] = N();
+	j[e] = q();
 }
 function Vt(e, t) {
 	let n = e + 1;
-	for (; C[n]; ) (delete C[n], (n += 1));
+	for (; j[n]; ) (delete j[n], (n += 1));
 	for (n = t + 1; J[n]; ) (delete J[n], (n += 1));
 }
 function H(e, t = !1) {
@@ -579,11 +579,11 @@ let _ = { branch: [], error: null, url: null },
 	ot,
 	v,
 	R,
-	q;
+	N;
 const ie = new Set(),
 	ze = new Map();
 async function dn(e, t, n) {
-	(globalThis.__sveltekit_qfwk3f?.data && globalThis.__sveltekit_qfwk3f.data,
+	(globalThis.__sveltekit_oc28ij?.data && globalThis.__sveltekit_oc28ij.data,
 		document.URL !== location.href && (location.href = location.href),
 		(y = e),
 		await e.hooks.init?.(),
@@ -597,7 +597,7 @@ async function dn(e, t, n) {
 		(v = history.state?.[B]),
 		(R = history.state?.[W]),
 		v || ((v = R = Date.now()), history.replaceState({ ...history.state, [B]: v, [W]: R }, '')));
-	const a = C[v];
+	const a = j[v];
 	function r() {
 		a && ((history.scrollRestoration = 'manual'), scrollTo(a.x, a.y));
 	}
@@ -623,7 +623,7 @@ function it(e) {
 	});
 }
 function Fe() {
-	(Te(v), De(Ye, C), st(R), De(We, J));
+	(Te(v), De(Ye, j), st(R), De(We, J));
 }
 async function Mt(e, t, n, a) {
 	let r;
@@ -693,7 +693,7 @@ async function ct(e, t, n) {
 				params: _.params,
 				route: { id: _.route?.id ?? null },
 				url: new URL(location.href),
-				scroll: C[v] ?? N()
+				scroll: j[v] ?? q()
 			},
 			willUnload: !1,
 			type: 'enter',
@@ -711,7 +711,7 @@ function ce({ url: e, params: t, branch: n, status: a, error: r, route: i, form:
 	const c = {
 		type: 'loaded',
 		state: { url: e, params: t, branch: n, error: r, route: i },
-		props: { constructors: Ct(n).map((u) => u.node.component), page: qe(k) }
+		props: { constructors: jt(n).map((u) => u.node.component), page: Ne(k) }
 	};
 	s !== void 0 && (c.props.form = s);
 	let l = {},
@@ -791,7 +791,7 @@ function Yt({ error: e, url: t, route: n, params: a }) {
 	return {
 		type: 'loaded',
 		state: { error: e, url: t, route: n, params: a, branch: [] },
-		props: { page: qe(k), constructors: [] }
+		props: { page: Ne(k), constructors: [] }
 	};
 }
 async function lt({ id: e, invalidating: t, url: n, params: a, route: r, preload: i }) {
@@ -882,7 +882,7 @@ async function Jt(e, t, n) {
 			}
 		}
 }
-async function Ce({ status: e, error: t, url: n, route: a }) {
+async function je({ status: e, error: t, url: n, route: a }) {
 	const r = {};
 	let i = null;
 	try {
@@ -944,7 +944,7 @@ function le(e) {
 }
 function ut({ url: e, type: t, intent: n, delta: a, event: r, scroll: i }) {
 	let s = !1;
-	const o = je(_, n, e, t, i ?? null);
+	const o = Ce(_, n, e, t, i ?? null);
 	(a !== void 0 && (o.navigation.delta = a), r !== void 0 && (o.navigation.event = r));
 	const c = {
 		...o.navigation,
@@ -968,15 +968,15 @@ async function M({
 	block: f = Be,
 	event: h
 }) {
-	const w = q;
-	q = c;
+	const w = N;
+	N = c;
 	const u = await fe(t, !1),
 		p =
 			e === 'enter'
-				? je(_, u, t, e)
+				? Ce(_, u, t, e)
 				: ut({ url: t, type: e, delta: n?.delta, intent: u, scroll: n?.scroll, event: h });
 	if (!p) {
-		(f(), q === c && (q = w));
+		(f(), N === c && (N = w));
 		return;
 	}
 	const m = v,
@@ -999,7 +999,7 @@ async function M({
 			i
 		);
 	}
-	if (((t = u?.url || t), q !== c)) return (p.reject(new Error('navigation aborted')), !1);
+	if (((t = u?.url || t), N !== c)) return (p.reject(new Error('navigation aborted')), !1);
 	if (d.type === 'redirect') {
 		if (o < 20) {
 			(await M({
@@ -1016,7 +1016,7 @@ async function M({
 				p.fulfil(void 0));
 			return;
 		}
-		d = await Ce({
+		d = await je({
 			status: 500,
 			error: await Z(new Error('Redirect loop'), { url: t, params: {}, route: { id: null } }),
 			url: t,
@@ -1055,13 +1055,13 @@ async function M({
 		}
 		((_ = d.state), d.props.page && (d.props.page.url = t));
 		const Q = S && (await S);
-		(Q ? (E = Q.commit()) : (ot.$set(d.props), Nt(d.props.page), (E = gt?.())), (rt = !0));
+		(Q ? (E = Q.commit()) : (ot.$set(d.props), qt(d.props.page), (E = gt?.())), (rt = !0));
 	} else await ct(d, ye, !1);
 	const { activeElement: O } = document;
 	(await E, await te(), await te());
 	let P = null;
 	if (Me) {
-		const b = n ? n.scroll : r ? N() : null;
+		const b = n ? n.scroll : r ? q() : null;
 		b
 			? scrollTo(b.x, b.y)
 			: (P = t.hash && document.getElementById(dt(t)))
@@ -1075,13 +1075,13 @@ async function M({
 		(X = !1),
 		e === 'popstate' && it(R),
 		p.fulfil(void 0),
-		p.navigation.to && (p.navigation.to.scroll = N()),
+		p.navigation.to && (p.navigation.to.scroll = q()),
 		G.forEach((b) => b(p.navigation)),
 		$.navigating.set((Y.current = null)));
 }
 async function ft(e, t, n, a, r) {
 	return e.origin === Ae && e.pathname === location.pathname && !at
-		? await Ce({ status: a, error: n, url: e, route: t })
+		? await je({ status: a, error: n, url: e, route: t })
 		: await H(e, r);
 }
 function Zt() {
@@ -1092,11 +1092,11 @@ function Zt() {
 		const c = o.target;
 		(clearTimeout(e),
 			(e = setTimeout(() => {
-				i(c, j.hover);
+				i(c, C.hover);
 			}, 20)));
 	});
 	function a(o) {
-		o.defaultPrevented || i(o.composedPath()[0], j.tap);
+		o.defaultPrevented || i(o.composedPath()[0], C.tap);
 	}
 	(I.addEventListener('mousedown', a), I.addEventListener('touchstart', a, { passive: !0 }));
 	const r = new IntersectionObserver(
@@ -1115,7 +1115,7 @@ function Zt() {
 			m = h && le(_.url) === le(h);
 		if (!(p.reload || m))
 			if (c <= p.preload_data) {
-				((t = { element: l, href: l.href }), (n = j.tap));
+				((t = { element: l, href: l.href }), (n = C.tap));
 				const g = await fe(h, !1);
 				if (!g) return;
 				zt(g);
@@ -1128,7 +1128,7 @@ function Zt() {
 			if (l || f) continue;
 			const h = ne(o);
 			h.reload ||
-				(h.preload_code === j.viewport && r.observe(o), h.preload_code === j.eager && me(c));
+				(h.preload_code === C.viewport && r.observe(o), h.preload_code === C.eager && me(c));
 		}
 	}
 	(G.add(s), s());
@@ -1136,7 +1136,7 @@ function Zt() {
 function Z(e, t) {
 	if (e instanceof Ee) return e.body;
 	const n = Ue(e),
-		a = jt(e);
+		a = Ct(e);
 	return y.hooks.handleError({ error: e, event: t, status: n, message: a }) ?? { message: a };
 }
 function Qt(e) {
@@ -1151,7 +1151,7 @@ function en() {
 		addEventListener('beforeunload', (t) => {
 			let n = !1;
 			if ((Fe(), !X)) {
-				const a = je(_, void 0, null, 'leave'),
+				const a = Ce(_, void 0, null, 'leave'),
 					r = {
 						...a.navigation,
 						cancel: () => {
@@ -1257,14 +1257,14 @@ function en() {
 			if (!ke) {
 				if (t.state?.[B]) {
 					const n = t.state[B];
-					if (((q = {}), n === v)) return;
-					const a = C[n],
+					if (((N = {}), n === v)) return;
+					const a = j[n],
 						r = t.state[Je] ?? {},
 						i = new URL(t.state[Ot] ?? location.href),
 						s = t.state[W],
 						o = _.url ? pe(location) === pe(_.url) : !1;
 					if (s === R && (rt || o)) {
-						(r !== k.state && (k.state = r), e(i), (C[v] = N()), a && scrollTo(a.x, a.y), (v = n));
+						(r !== k.state && (k.state = r), e(i), (j[v] = q()), a && scrollTo(a.x, a.y), (v = n));
 						return;
 					}
 					const l = n - v;
@@ -1278,7 +1278,7 @@ function en() {
 						block: () => {
 							history.go(-l);
 						},
-						nav_token: q,
+						nav_token: N,
 						event: t
 					});
 				} else if (!z) {
@@ -1296,7 +1296,7 @@ function en() {
 		t.persisted && $.navigating.set((Y.current = null));
 	});
 	function e(t) {
-		((_.url = k.url = t), $.page.set(qe(k)), $.page.notify());
+		((_.url = k.url = t), $.page.set(Ne(k)), $.page.notify());
 	}
 }
 async function tn(
@@ -1340,7 +1340,7 @@ async function tn(
 			await H(new URL(u.location, location.href));
 			return;
 		}
-		((h = await Ce({
+		((h = await je({
 			status: Ue(u),
 			error: await Z(u, { url: l, params: r, route: i }),
 			url: l,
@@ -1368,7 +1368,7 @@ function an(e, t = !0) {
 	else {
 		const a = dt(e);
 		if (a && document.getElementById(a)) {
-			const { x: i, y: s } = N();
+			const { x: i, y: s } = q();
 			setTimeout(() => {
 				const o = history.state;
 				((ke = !0),
@@ -1408,7 +1408,7 @@ function an(e, t = !0) {
 		}
 	}
 }
-function je(e, t, n, a, r = null) {
+function Ce(e, t, n, a, r = null) {
 	let i, s;
 	const o = new Promise((l, f) => {
 		((i = l), (s = f));
@@ -1417,7 +1417,7 @@ function je(e, t, n, a, r = null) {
 		o.catch(() => {}),
 		{
 			navigation: {
-				from: { params: e.params, route: { id: e.route?.id ?? null }, url: e.url, scroll: N() },
+				from: { params: e.params, route: { id: e.route?.id ?? null }, url: e.url, scroll: q() },
 				to: n && {
 					params: t?.params ?? null,
 					route: { id: t?.route?.id ?? null },
@@ -1433,7 +1433,7 @@ function je(e, t, n, a, r = null) {
 		}
 	);
 }
-function qe(e) {
+function Ne(e) {
 	return {
 		data: e.data,
 		error: e.error,
